@@ -8,7 +8,7 @@ header {
 
 header ul {
   list-style: none;
-  margin-left: 78%;
+  margin-left: 65%;
   color: white;
   margin-top: 0;
   height: 60px;
@@ -30,12 +30,32 @@ header .bird {
 .signupButton {
   margin-right: 3%;
   width: 72px;
-  text-align: center; }
+  text-align: center;
+  border-radius: 5%; }
+
+.logoutButton {
+  width: 72px;
+  text-align: center;
+  border-radius: 5%; }
+
+.logoutButton:hover {
+  background-color: white;
+  color: #1DA1F2; }
 
 .loginButton {
   background-color: #71DCB5;
   width: 72px;
-  text-align: center; }
+  text-align: center;
+  border-radius: 5%;
+  margin-right: 3%; }
+
+.loginButton:hover {
+  background-color: white;
+  color: #1DA1F2; }
+
+.signupButton:hover {
+  background-color: white;
+  color: #1DA1F2; }
 
 header h1,
 header h3 {
