@@ -1,6 +1,8 @@
 import $ from 'jquery';
 import Backbone from 'backbone';
 import loginView from './views/loginView';
+import session from './models/session';
+import TweetPageView from './views/TweetPageView';
 
 
 const Router = Backbone.Router.extend ({
@@ -8,20 +10,23 @@ const Router = Backbone.Router.extend ({
 routes:{
   login:'loginFunction',
   signup:'signupFunction',
-  tweetPage:'tweetPageFunction'
+  tweetPage:'tweetPageFunction',
+  logout: 'logoutFunction'
 },
 
 loginFunction: function (){
   let login = new loginView ();
   login.render();
-  $('.container').append(login.$el);
+  $('.container').empty().append(login.$el);
 },
 
 tweetPageFunction: function (){
-$('.container').empty().append(`<div> YAS QUEEEN </div>`);
-// append every componant of the tweet page including making, seeing, profile for tweet
+let tweetPageView = new TweetPageView();
+tweetPageView.render();
+$('.container').empty().append(tweetPageView.$el);
 
-}
+},
+
 
 
 });

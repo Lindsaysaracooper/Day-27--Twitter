@@ -7,11 +7,14 @@ import settings from './settings';
 $(document).ajaxSend(function(evt, xhrAjax, jquerAjax){
   if (session.get('authtoken')){
     xhrAjax.setRequestHeader('Authorization', 'Kinvey ' + session.get('authtoken'));
-} else {
-  xhrAjax.setRequestHeader('Authorization', 'Basic ' + settings.basicAuth);
+  } else {
+    xhrAjax.setRequestHeader('Authorization', 'Basic ' + settings.basicAuth);
 
-}
+  }
+});
 
+$('.logoutButton').click(function(evt){
+  router.navigate('login', {trigger:true});
 });
 
 Backbone.history.start();

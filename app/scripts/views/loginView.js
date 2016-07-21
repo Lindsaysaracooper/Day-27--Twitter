@@ -2,7 +2,7 @@ import Backbone from 'backbone';
 import router from '../router';
 import $ from 'jquery';
 import session from '../models/session';
-
+import settings from '../settings';
 const loginView = Backbone.View.extend({
 
     tagName: 'section',
@@ -13,14 +13,16 @@ const loginView = Backbone.View.extend({
     },
     loginButtonFunction: function(e) {
       let url;
-        if ($(e.target).attr('class') === '.loginButton') {
+      console.log($(e.target).attr('class'));
+        if ($(e.target).attr('class') === 'loginButton') {
             url = `https://baas.kinvey.com/user/${settings.appId}/login`;
         } else {
             url = session.urlRoot;
         }
+        // console.log(url);
         let username = this.$('#username').val();
         let password = this.$('#password').val();
-        // e.preventdefault();
+        e.preventDefault();
         session.save({
             username: username,
             password: password
@@ -46,7 +48,7 @@ const loginView = Backbone.View.extend({
         <h3> Don't have an account? Sign up:</h3>
         <h2>Join Twitter today</h2>
         <input type="text" placeholder="username" value="">
-        <input type="password" placeholder="username" value="">
+        <input type="password" placeholder="password" value="">
         <input class ="signUpButton" type="button" name="Sign Up" value="SIGN UP">
         `;
     },

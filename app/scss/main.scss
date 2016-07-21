@@ -9,7 +9,7 @@ header {
 }
 header ul {
     list-style: none;
-    margin-left: 78%;
+    margin-left: 65%;
     color: white;
     margin-top: 0;
     height: 60px;
@@ -32,12 +32,37 @@ header .bird {
     margin-right: 3%;
     width:72px;
     text-align: center;
+    border-radius: 5%;
+}
+
+.logoutButton{
+  width:72px;
+  text-align: center;
+  border-radius: 5%;
+}
+
+.logoutButton:hover{
+  background-color: white;
+  color:#1DA1F2;
 }
 .loginButton {
     background-color: #71DCB5;
     width:72px;
     text-align: center;
+    border-radius: 5%;
+    margin-right: 3%;
 }
+
+.loginButton:hover{
+    background-color: white;
+    color:#1DA1F2;
+
+}
+.signupButton:hover{
+  background-color: white;
+  color:#1DA1F2;
+}
+
 header h1,
 header h3 {
     text-align: center;
@@ -70,4 +95,78 @@ section .loginButton, section .signUpButton{
       border: none;
       width: 75%;
       margin-top: 2vh;
+}
+
+// twitter page stylings
+
+.tweetbox{
+  display: inline-block;
+background: #C4FBE2;
+padding: 12px;
+margin-left: 26%;
+margin-top: 4vh;
+
+}
+
+.tweetBody{
+width: 400px;
+}
+.tweetSubmitButton{
+  background-color: #71DCB5;
+   border: none;
+   color: white;
+   padding: 11px;
+   border-radius: 9%;
+}
+
+.camera{
+  color: white;
+font-size: 1.2rem;
+}
+
+.tweetfeed{
+  background: #C4FBE2;
+  width: 60%;
+  margin-left: 20%;
+  height: 80vh;
+  margin-bottom: 12vh;
+}
+
+.tweetfeed h2{
+  text-align: center;
+    color: white;
+    font-size: 3rem;
+    padding-top: 2vh;
+    background: #57AEE7;
+    font-weight: 300;
+}
+
+.tweetfeed li{
+  list-style: none;
+}
+
+.author{
+  font-weight: bolder;
+}
+
+.body{
+  background-color: #F5F8FA;
+  width:80%;
+}
+
+.body{
+  background-color: #F5F8FA;
+width: 80%;
+margin-left: 6%;
+padding: 1vh;
+}
+
+.deleteButton{
+  float: right;
+background-color: #71DCB5;
+border: none;
+color: white;
+padding: 11px;
+border-radius: 9%;
+margin-right: 1%;
 }
